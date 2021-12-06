@@ -26,7 +26,15 @@ const Register = () => {
         <Col sm="12" md={{ size: 5, offset: 3 }}>
           <div className="paper">
             <div className="header">
-              <img src="http://localhost:1337/uploads/5a60a9d26a764e7cba1099d8b157b5e9.png" />
+              <img style={{
+        alignSelf: 'right',
+        flex: 1,
+        width: '35%',
+        height: null,
+        resizeMode: 'cover',
+        borderWidth: 1,
+        borderRadius: 75,
+      }} src="http://localhost:1337/uploads/0978d39982ab4eab80fe001fde64507b.png" />
             </div>
             <section className="wrapper">
               {Object.entries(error).length !== 0 &&
@@ -120,7 +128,7 @@ const Register = () => {
       <style jsx>
         {`
           .paper {
-            border: 1px solid lightgray;
+            border: 1px solid lightgrey;
             box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
               0px 1px 1px 0px rgba(0, 0, 0, 0.14),
               0px 2px 1px -1px rgba(0, 0, 0, 0.12);

@@ -18,7 +18,7 @@ function MyApp(props){
   addItem = (item) => {
     let { items } = state.cart;
     //check for item already in cart
-    //if not in cart, add item if item is found increase quanity ++
+    //if not in cart, add item if item is found increase quantity ++
     let foundItem = true;
     if(items.length > 0){
       foundItem = items.find((i) => i.id === item.id);
