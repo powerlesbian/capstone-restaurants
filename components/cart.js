@@ -5,6 +5,7 @@ import AppContext from "./context"
 import Link from "next/link"
 // we can pass cart data in via props method 
 // the alternative is using useContext as below
+
 function Cart() {
   let isAuthenticated = true;
   let {cart,addItem,removeItem} = useContext(AppContext);
@@ -17,7 +18,7 @@ function Cart() {
   const router = useRouter();
   console.log(`Router Path: ${JSON.stringify(router)}`)
   const renderItems = ()=>{
-  let {items} = cart;
+  let { items } = cart;
    console.log(`items: ${JSON.stringify(items)}`)
     if(items && items.length){
       var itemList = cart.items.map((item) => {

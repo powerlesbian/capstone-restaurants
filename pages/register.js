@@ -25,7 +25,7 @@ const Register = () => {
       <Row>
         <Col sm="12" md={{ size: 5, offset: 3 }}>
           <div className="paper">
-            <div className="header">
+            <div className="header" style={{ textIndent: 7 }} > Sign up to Food Greatness
               <img style={{
         alignSelf: 'right',
         flex: 1,
@@ -34,7 +34,7 @@ const Register = () => {
         resizeMode: 'cover',
         borderWidth: 1,
         borderRadius: 75,
-      }} src="http://localhost:1337/uploads/0978d39982ab4eab80fe001fde64507b.png" />
+      }} src="http://localhost:1337/uploads/0978d39982ab4eab80fe001fde64507b.png" /> 
             </div>
             <section className="wrapper">
               {Object.entries(error).length !== 0 &&

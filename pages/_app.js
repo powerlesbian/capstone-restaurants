@@ -1,9 +1,13 @@
+import React from "react";
+import App from "next/app";
+import fetch from "isomorphic-fetch";
 import { useContext, useState } from "react";
 import Head from "next/head";
 import AppContext from "../components/context";
-import Home from "./index"
-import Layout from "../components/layout"
-import Cookie from "js-cookie"
+import Home from "./index";
+import Layout from "../components/layout";
+import Cookie from "js-cookie";
+//import withData from "../lib/apollo"
 
 
 function MyApp(props){
@@ -13,8 +17,9 @@ function MyApp(props){
   
   
   setUser = (user) => {
-    setState({ user });
+    this.setState({ user });
   };
+  
   addItem = (item) => {
     let { items } = state.cart;
     //check for item already in cart

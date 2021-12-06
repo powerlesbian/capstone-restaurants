@@ -22,7 +22,7 @@ export const registerUser = (username, email, password) => {
 
         //resolve the promise to set loading to false in SignUp form
         resolve(res);
-        //redirect back to home page for restaurance selection
+        //redirect back to home page for restaurant selection
         Router.push("/");
       })
       .catch((error) => {
@@ -47,7 +47,7 @@ export const login = (identifier, password) => {
 
         //resolve the promise to set loading to false in SignUp form
         resolve(res);
-        //redirect back to home page for restaurance selection
+        //redirect back to home page for restaurant selection
         Router.push("/");
       })
       .catch((error) => {
