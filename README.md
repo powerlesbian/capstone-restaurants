@@ -21,11 +21,11 @@ Once this is working, navigate to localhost:3000 to see the page with out data (
 new terminal window, cd backend 
 run npm install, followed by npm run build, 
 
-if:  due to strapi versioning issues, it doesn't like the build:
+if:  due to versioning issues, it doesn't like the build:
 
 run npx browserslist@latest --update-db
 
-this will update the webpack caniuse-lite.  run npm run build again. Finally followed by npm run develop. 
+this will update the webpack caniuse-lite. run on both frontend and backend.  run npm run build again. Finally followed by npm run develop. 
 
 ## on future revisits just do npm run dev on root folder and cd backend npm run develop
 
