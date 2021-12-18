@@ -18,8 +18,8 @@ npm run dev
 You can check the package.json to see that running npm run dev is equivalent to running next dev. 
 Once this is working, navigate to localhost:3000 to see the page with out data (an error where data would be above cart)
 
-cd backend 
-From that directory, run npm install, followed by npm run build, followed by npm run develop. 
+new terminal window, cd backend 
+run npm install, followed by npm run build, followed by npm run develop. 
 
 ## on future revisits just do npm run dev on root folder and cd backend npm run develop
 
