@@ -19,7 +19,13 @@ You can check the package.json to see that running npm run dev is equivalent to 
 Once this is working, navigate to localhost:3000 to see the page with out data (an error where data would be above cart)
 
 new terminal window, cd backend 
-run npm install, followed by npm run build, followed by npm run develop. 
+run npm install, followed by npm run build, 
+
+if:  due to strapi versioning issues, it doesn't like the build:
+
+run npx browserslist@latest --update-db
+
+this will update the webpack caniuse-lite.  run npm run build again. Finally followed by npm run develop. 
 
 ## on future revisits just do npm run dev on root folder and cd backend npm run develop
 
