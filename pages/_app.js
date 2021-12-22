@@ -4,20 +4,27 @@ import fetch from "isomorphic-fetch";
 import { useContext, useState } from "react";
 import Head from "next/head";
 import AppContext from "../components/context";
+//import { UserProvider } from "@auth0/nextjs-auth0";
 import Home from "./index";
 import Layout from "../components/layout";
 import Cookie from "js-cookie";
+import { UserProvider } from "@auth0/nextjs-auth0";
 //import withData from "../lib/apollo"
 
+// The authentication state exposed by UserProvider can be accessed in any component using the useUser() hook.
 
-function MyApp(props){
-  var {cart,addItem,removeItem, user, setUser} = useContext(AppContext)
-  const [state,setState] = useState({cart:cart});
-  const { Component, pageProps } = props;
+export default function MyApp({ Component, pageProps }) {
+ 
+
+// function MyApp(props){
+  var {cart,addItem,removeItem, user, setUser } = useContext(AppContext)
+  const [state, setState] = useState({cart:cart}, {user: user});
+  // const { user, setUser } = useContext(AppContext)
+  // const { Component, pageProps } = props;
   
   
   setUser = (user) => {
-    this.setState({ user });
+    setState({ user });
   };
   
   addItem = (item) => {
@@ -97,10 +104,11 @@ function MyApp(props){
           crossOrigin="anonymous"
         />
       </Head>
-    
-      <Layout>
-          <Component {...pageProps} />
-      </Layout>
+<Layout>
+
+      <Component {...pageProps} />
+
+    </Layout>
 
     </AppContext.Provider>
   );
@@ -108,4 +116,4 @@ function MyApp(props){
 }
 
 
-export default MyApp;
+

@@ -15,14 +15,23 @@ import {
 import { login } from "../components/auth";
 import AppContext from "../components/context";
 
+
+// where should I put this?? 
+// A user can now log in to your application by visiting the /api/auth/login route provided by the SDK. Add a link to your login route using an anchor tag. 
+// <a href="/api/auth/login">Login</a>
+
+
 function Login(props) {
   const [data, updateData] = useState({ identifier: "", password: "" });
+  // const [user, setUser] = useState(appContext);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+
   const router = useRouter();
   const appContext = useContext(AppContext);
 
   useEffect(() => {
+    // console.log(`is Authenticated? ${isAuthenticated} redirect to root`)
     if (appContext.isAuthenticated) {
       router.push("/"); // redirect if you're already logged in
     }
@@ -100,6 +109,7 @@ function Login(props) {
                             setLoading(false);
                             // set authed User in global context to update header/app state
                             appContext.setUser(res.data.user);
+                            console.log(res.data.user);
                           })
                           .catch((error) => {
                             //setError(error.response.data);

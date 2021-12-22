@@ -110,3 +110,20 @@ coverage
 exports
 .cache
 build
+
+
+############################
+# Next
+############################
+
+.next
+.next/
+
+############################
+# Others
+############################
+
+.editorconfig
+.eslintignore
+.eslintrc
+.temp

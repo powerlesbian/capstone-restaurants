@@ -11,6 +11,7 @@ import {
   CardTitle,
   Row,
   Col} from "reactstrap";
+import CardSubtitle from "reactstrap/lib/CardSubtitle";
   
 function Dishes({restId}){
   const [restaurantID, setRestaurantID] = useState()
@@ -59,8 +60,9 @@ const GET_RESTAURANT_DISHES = gql`
                   src={`http://localhost:1337${res.image.url}`}
                 />
                 <CardBody>
-                  <CardTitle>{res.name}</CardTitle>
-                  <CardText>{res.description}</CardText>
+                  <CardTitle className="card-title" >{res.name}</CardTitle>
+                  <CardSubtitle>Price: ${res.price}</CardSubtitle> <br></br>
+                  <CardText className="card-text">{res.description}</CardText>
                 </CardBody>
                 <div className="card-footer">
                   <Button color="info"

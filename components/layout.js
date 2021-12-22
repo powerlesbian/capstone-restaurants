@@ -1,6 +1,6 @@
 /* /components/Layout.js */
 
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { Container, Nav, NavItem } from "reactstrap";
@@ -9,7 +9,12 @@ import AppContext from "./context";
 
 const Layout = (props) => {
 const title = "Welcome to No More Cereal!";
-const {user} = useContext(AppContext);
+const context = useContext(AppContext)
+const user = useState(context.user);
+
+console.log(`current user is ${context.username}`);
+
+
   return (
     <div>
       <Head>
@@ -47,9 +52,11 @@ const {user} = useContext(AppContext);
               <a className="nav-link">Link to real food</a>
             </Link>
           </NavItem>
+
           <NavItem className="justify-content-end">
             {user ? (
               <h5>{user.username}</h5>
+
             ) : (
               <Link href="/register">
                 <a className="nav-link">Quick Register</a>

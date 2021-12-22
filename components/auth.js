@@ -33,6 +33,7 @@ export const registerUser = (username, email, password) => {
 };
 
 export const login = (identifier, password) => {
+  
   //prevent function from being ran on the server
   if (typeof window === "undefined") {
     return;
@@ -54,6 +55,8 @@ export const login = (identifier, password) => {
         //reject the promise and pass the error object back to the form
         reject(error);
       });
+
+      console.log(`post to auth was succesful ${identifier}`)
   });
 };
 
