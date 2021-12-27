@@ -31,3 +31,6 @@ this will update the webpack caniuse-lite. run on both frontend and backend.  ru
 
 Then, navigate to localhost:1337 in your browser to confirm that Strapi is running. 
 select the Sign up link at the top right. Input a username, email, and password to complete the form. Afterward, navigate back to your Strapi dashboard and view the new user within the user list.  set Roles & Permissions to allow all. Add Restaurants and dishes. 
+
+<img width="877" alt="Screenshot 2021-12-27 at 9 47 45 AM" src="https://user-images.githubusercontent.com/81912588/147438691-d6a1ad41-18ac-4c91-9940-d1e1e8316ab1.png">
+
