@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:14
 
 ENV PORT 3000
 
@@ -19,3 +19,8 @@ EXPOSE 3000
 
 # Running the app
 CMD "npm" "run" "dev"
+
+# docker destop upgrade issue
+# export DOCKER_BUILDKIT=0
+# export COMPOSE_DOCKER_CLI_BUILD=0
+# on terminal: DOCKER_BUILDKIT=0  docker build .
