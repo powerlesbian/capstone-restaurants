@@ -1,6 +1,17 @@
 version: "3"
 
 services:
+  frontend:
+    image: powerlesbian/next-restaurant-strapi:latest
+    restart: always
+    networks:
+      - strapi-app-network
+    ports:
+      - "3000:3000"
+    entrypoint: ["npm", "run", "dev"]
+    # links:
+    #   -strapi
+
   strapiexample:
     image: strapi/strapi
     container_name: strapiexample
@@ -19,6 +30,7 @@ services:
       - ./app:/srv/app
     ports:
       - "1337:1337"
+
   mongoexample:
     image: mongo
     container_name: mongoexample
@@ -40,3 +52,4 @@ networks:
 
 volumes:
   strapidata:
+    driver: local
