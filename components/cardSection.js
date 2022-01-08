@@ -24,7 +24,9 @@ function CardSection(props) {
               </div>
               {props.stripeError ? (
                 <div>{props.stripeError.toString()}</div>
-              ) : null}
+              ) : (
+                <div fontSize={"8pts"}>For further enquiries please contact +852 39185112 during office hours.</div>
+              )}
               <div id="card-errors" role="alert" />
             </div>
           </fieldset>

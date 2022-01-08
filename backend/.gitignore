@@ -67,9 +67,7 @@ $RECYCLE.BIN/
 
 .tmp
 *.log
-*.sql
-*.sqlite
-*.sqlite3
+
 
 
 ############################
@@ -109,7 +107,6 @@ coverage
 
 exports
 .cache
-build
 
 
 ############################

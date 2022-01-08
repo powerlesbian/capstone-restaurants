@@ -1,6 +1,11 @@
 {
   "/_app": "pages/_app.js",
+  "/api/auth/[...auth0]": "pages/api/auth/[...auth0].js",
+  "/checkout": "pages/checkout.html",
+  "/": "pages/index.html",
+  "/login": "pages/login.html",
+  "/register": "pages/register.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js"
+  "/404": "pages/404.html"
 }
